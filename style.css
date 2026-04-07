@@ -626,5 +626,6 @@
     @media (max-width: 600px) {
     .hero-poster {
       max-width: 700px;
+      margin-bottom: 5px;
     }
   }

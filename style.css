@@ -100,17 +100,17 @@
       background: #f0f0f0;
 
     }
-
+    .hero-img {
+      width: 80%;
+      height: auto;
+      display: block;
+      border-radius: 25px;
+    }
     .hero-poster {
       width: 100%;
       border-radius: 14px;
       overflow: hidden;
-      min-height: 420px;
       background: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
       margin-bottom: 15px;
     }
 
@@ -618,3 +618,8 @@
       .hero-poster { min-height: 240px; }
       .promo-info-card { padding: 1.5rem 1.25rem 1.25rem; }
     }
+    @media (max-width: 600px) {
+    .hero-img {
+      border-radius: 18px;
+    }
+  }

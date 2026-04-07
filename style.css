@@ -97,18 +97,18 @@
     /* ── HERO POSTER ── */
     .hero-wrap {
       padding: 0 1.5rem;
-      background: #f0f0f0;
-
+      display: flex;
+      justify-content: center;
     }
     .hero-img {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: auto;
       display: block;
       border-radius: 25px;
-      object-fit: cover;
     }
     .hero-poster {
       width: 100%;
+      max-width: 1700px;
       border-radius: 14px;
       overflow: hidden;
       background: transparent;
@@ -117,11 +117,10 @@
 
     .poster-placeholder {
       width: 100%;
-      min-height: 420px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      /* justify-content: center; */
       background: transparent;
       color: transparent;
       font-size: 14px;
@@ -622,5 +621,10 @@
     @media (max-width: 600px) {
     .hero-img {
       border-radius: 18px;
+    }
+  }
+    @media (max-width: 600px) {
+    .hero-poster {
+      max-width: 700px;
     }
   }

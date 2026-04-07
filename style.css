@@ -102,9 +102,10 @@
     }
     .hero-img {
       width: 80%;
-      height: auto;
+      height: 80%;
       display: block;
       border-radius: 25px;
+      object-fit: cover;
     }
     .hero-poster {
       width: 100%;

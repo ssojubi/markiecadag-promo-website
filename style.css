@@ -8,8 +8,10 @@
     body {
       background: #f0f0f0;
       color: #111;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-
     /* ── NAV ── */
     .nav {
       background: white;
@@ -534,6 +536,7 @@
       background: #111;
       color: #ccc;
       padding: 3rem 2rem 1.5rem;
+      margin-top: auto;
     }
 
     .footer-grid {

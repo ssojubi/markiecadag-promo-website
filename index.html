@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="mc_logo.jpg">
+  <title>Markie Cadag — Promo Name</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ── NAVIGATION ── -->
+   <nav class="nav">
+    <img src="mc_logo.jpg" style="width:36px;height:36px;border-radius:50%;">
+    <span class="nav-name">Markie Cadag</span>
+  </nav>
+
+  <!-- ── TAB NAVIGATION ── -->
+  <div class="tab-nav-wrap">
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showTab('promo', this)">Promo</button>
+      <button class="tab-btn" onclick="showTab('prizes', this)">My Prizes</button>
+      <button class="tab-btn" onclick="showTab('winners', this)">Winner announcement</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ -->
+  <!--        PROMO TAB            -->
+  <!-- ════════════════════════════ -->
+  <div id="tab-promo" class="tab-panel active">
+
+    <!-- Hero Poster — full width -->
+    <div class="hero-wrap">
+      <div class="hero-poster">
+        <div class="poster-placeholder">
+          <span></span>
+          <img src="header_img.png" style="width:80%;height:100%;object-fit:cover;display:block;border-radius: 25px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Small info card overlapping the poster bottom -->
+    <div class="promo-info-wrap">
+      <div class="promo-info-card">
+        <h2>Need a win?</h2>
+        <p>Get a chance to win exciting prizes in the [promo name]!</p>
+        <!-- <p class="consent">( By proceeding, I agree that Coca-Cola may publish my name in marketing materials if I am selected as a winner. )</p> -->
+        <a class="participate-btn" href="https://www.facebook.com/MCmarkiecadag" target="_blank">Participate Now</a>
+        <a class="tnc-link" href="#" target="_blank">See Terms and Conditions</a>
+      </div>
+    </div>
+
+    <!-- Steps -->
+    <div class="steps-section">
+      <h2>How to join?</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>[step 1]</h3>
+          <p>desc</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>[step 2]</h3>
+          <p>desc</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>[step 3]</h3>
+          <p>desc</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map / Outlets -->
+    <div class="outlets-section">
+      <h2>See our location here</h2>
+      <p>Completed your COKE cap combination? Redeem your prizes and promo codes at this location!</p>
+      <div class="map-container">
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.0079127958984!2d120.91348104034364!3d14.310972986199527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d589eeb5bbed%3A0xb4084cfab37a0599!2sMARKIECADAG%20%22MC%22%20CUSTOM-MADE%20FASHION!5e0!3m2!1sen!2sph!4v1775528312958!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2>Frequently asked questions</h2>
+
+     <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does this shop have a promo?</button>
+        <div class="faq-a">[answer]</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I join the promo?</button>
+        <div class="faq-a">[answer]</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Who can join the promo?</button>
+        <div class="faq-a">[answer]</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the promo duration?</button>
+        <div class="faq-a">[answer]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ -->
+  <!--        PRIZES TAB           -->
+  <!-- ════════════════════════════ -->
+  <div id="tab-prizes" class="tab-panel">
+
+    <div class="prizes-header">
+      <h2>Prizes</h2>
+      <p>Get the chance to win exciting prizes!</p>
+    </div>
+
+    <div class="prizes-grid">
+      <div class="prize-card">
+        <!-- <div class="prize-icon">🥤</div> -->
+        <h3>Gown</h3>
+        <p>desc</p>
+        <span class="prize-qty">1 winner</span>
+      </div>
+      <div class="prize-card">
+        <!-- <div class="prize-icon">🚗</div> -->
+        <h3>Gown 2</h3>
+        <p>desc</p>
+        <span class="prize-qty">1 winner</span>
+      </div>
+      <div class="prize-card">
+        <!-- <div class="prize-icon">🥤</div> -->
+        <h3>Gown</h3>
+        <p>desc</p>
+        <span class="prize-qty">1 winner</span>
+      </div>
+      <div class="prize-card">
+        <!-- <div class="prize-icon">🚗</div> -->
+        <h3>Gown 2</h3>
+        <p>desc</p>
+        <span class="prize-qty">1 winner</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════ -->
+  <!--       WINNERS TAB           -->
+  <!-- ════════════════════════════ -->
+  <div id="tab-winners" class="tab-panel">
+
+    <div class="winners-header">
+      <h2>Winner announcement</h2>
+      <p>Check out the latest winners of the [promo name]!</p>
+    </div>
+<!-- 
+    <div class="episodes-section">
+      <h3>Episode schedule — 4:30 PM every week</h3>
+      <div class="episode-list">
+        <div class="ep-chip aired">April 5</div>
+        <div class="ep-chip">April 11</div>
+        <div class="ep-chip">April 18</div>
+        <div class="ep-chip">April 25</div>
+        <div class="ep-chip">May 2</div>
+        <div class="ep-chip">May 9</div>
+        <div class="ep-chip">May 16</div>
+        <div class="ep-chip">May 23</div>
+        <div class="ep-chip">May 30</div>
+      </div>
+      <div class="winners-notice">
+        <p>Winners are announced via the official Markie Cadag Facebook page.</p>
+      </div>
+    </div> -->
+
+    <div class="winners-table-section">
+      <h3>Recent winners</h3>
+      <table class="w-table">
+        <thead>
+          <tr>
+            <th>Episode</th>
+            <th>Winner</th>
+            <th>Prize</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>April 5</td>
+            <td>J*** M. (Laguna)</td>
+            <td><span class="prize-tag">Wedding Gown</span></td>
+          </tr>
+          <tr>
+            <td>April 5</td>
+            <td>R*** C. (Cavite)</td>
+            <td><span class="prize-tag">Debut Gown</span></td>
+          </tr>
+          <tr>
+            <td colspan="3" style="text-align:center; color:#999; font-size:13px; padding-top:1rem;">
+              <!-- Next episode: April 11 at 4:30 PM -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Markie Cadag</h3>
+        <p>Your official [Promo] partner. Visit us to claim your prize!</p>
+        <div class="social-links">
+          <a class="social-btn" href="https://www.facebook.com/MCmarkiecadag">Facebook</a>
+          <a class="social-btn" href="https://www.instagram.com/markiecadagcustommadefashion">Instagram</a>
+        </div>
+      </div>
+      <!-- <div class="footer-col">
+        <h4>About</h4>
+        <a href="#">Our store</a>
+        <a href="#">Contact us</a>
+        <a href="#">Location</a>
+      </div> -->
+      <div class="footer-col">
+        <h4>Promo</h4>
+        <a href="#" onclick="showTab('promo', document.querySelectorAll('.tab-btn')[0]); return false;">How to join</a>
+        <a href="#" onclick="showTab('prizes', document.querySelectorAll('.tab-btn')[1]); return false;">Prizes</a>
+        <a href="#" onclick="showTab('winners', document.querySelectorAll('.tab-btn')[2]); return false;">Winners</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Terms &amp; conditions</a>
+        <!-- <a href="#">Privacy policy</a>
+        <a href="#">Cookie notice</a> -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Markie Cadag. [Promo] is a promotion by Markie Cadag. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

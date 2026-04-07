@@ -1,0 +1,617 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f0f0f0;
+      color: #111;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      background: white;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      gap: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 13px;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .nav-name {
+      color: #111;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* ── TAB NAV ── */
+    .tab-nav-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 1.25rem 0;
+      background: transparent;
+      position: sticky;
+      top: 60px;
+      z-index: 99;
+    }
+
+    /* tab-nav-wrap sticky */
+
+    .tab-nav {
+      background: #807e7e;
+      border-radius: 10px;
+      display: inline-flex;
+      padding: 12px;
+      gap: 2px;
+    }
+
+    .tab-btn {
+      padding: 0.55rem 1.4rem;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      border-radius: 7px;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .tab-btn.active {
+      background: #333;
+      color: white;
+    }
+
+    /* ── TAB PANELS ── */
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* ── HERO POSTER ── */
+    .hero-wrap {
+      padding: 0 1.5rem;
+      background: #f0f0f0;
+
+    }
+
+    .hero-poster {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 420px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .poster-placeholder {
+      width: 100%;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: transparent;
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .poster-placeholder span {
+      font-size: 32px;
+    }
+
+    /* ── PROMO INFO CARD ── */
+    .promo-info-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 0 1.5rem 2rem;
+      background: #f0f0f0;
+      margin-top: 12px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .promo-info-card {
+      background: white;
+      border-radius: 14px;
+      width: 100%;
+      max-width: 640px;
+      padding: 2rem 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    .promo-info-card h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 0.5rem;
+    }
+
+    .promo-info-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+    }
+
+    .promo-info-card .consent {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 1.25rem;
+    }
+
+    .participate-btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 0.75rem 2.5rem;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 1rem;
+       text-decoration: none;
+    }
+
+    .participate-btn:hover {
+      background: #333;
+    }
+
+    .tnc-link {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #111;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* ── STEPS ── */
+    .steps-section {
+      background: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .steps-section h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      color: #111;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      padding: 1.5rem;
+    }
+
+    .step-num {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #111;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .step-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .step-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ── OUTLETS / MAP ── */
+    .outlets-section {
+      background: #f9f9f9;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .outlets-section h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .outlets-section p {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 14px;
+    }
+
+    .map-container {
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      height: 320px;
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      background: white;
+      padding: 3rem 2rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .faq-section h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #111;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eee;
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 1rem 0;
+      font-size: 15px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #111;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 20px;
+      color: #111;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .faq-q.open::after {
+      content: '−';
+    }
+
+    .faq-a {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      padding-bottom: 1rem;
+      display: none;
+    }
+
+    .faq-a.open {
+      display: block;
+    }
+
+    /* ── PRIZES TAB ── */
+    .prizes-header {
+      background: #111;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .prizes-header h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .prizes-header p {
+      opacity: 0.7;
+      font-size: 16px;
+    }
+
+    .prizes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 2.5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .prize-card {
+      background: white;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .prize-icon {
+      font-size: 52px;
+      margin-bottom: 1rem;
+    }
+
+    .prize-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .prize-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .prize-qty {
+      display: inline-block;
+      background: #f5f5f5;
+      color: #333;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 0.75rem;
+      border: 1px solid #e0e0e0;
+    }
+
+    /* ── WINNERS TAB ── */
+    .winners-header {
+      background: #111;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .winners-header h2 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .winners-header p {
+      opacity: 0.7;
+    }
+
+    .episodes-section {
+      padding: 2.5rem 2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .episodes-section h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #111;
+    }
+
+    .episode-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .ep-chip {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .ep-chip.aired {
+      background: #111;
+      color: white;
+      border-color: #111;
+    }
+
+    .winners-notice {
+      background: #f9f9f9;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .winners-notice p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .winners-table-section {
+      padding: 0 2rem 2.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .winners-table-section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    .w-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .w-table th {
+      background: #111;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    .w-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .w-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .prize-tag {
+      display: inline-block;
+      background: #f5f5f5;
+      color: #333;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-weight: 500;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 3rem 2rem 1.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+    }
+
+    .footer-brand h3 {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #999;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #999;
+      font-size: 13px;
+      text-decoration: none;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1.25rem;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .social-btn {
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .prizes-grid { grid-template-columns: 1fr; }
+      .episode-list { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .tab-btn { padding: 0.55rem 1rem; font-size: 13px; }
+      .hero-poster { min-height: 240px; }
+      .promo-info-card { padding: 1.5rem 1.25rem 1.25rem; }
+    }

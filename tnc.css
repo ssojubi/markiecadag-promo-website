@@ -9,6 +9,7 @@ body {
   background: #f0f0f0;
   color: #111;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ── NAV ── */

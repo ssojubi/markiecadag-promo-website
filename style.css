@@ -709,11 +709,11 @@ footer {
   }
   
   .tab-nav-wrap {
-    padding: 0.75rem 0.5rem; 
+    padding: 0.5rem 0.25rem; 
   }
 
   .tab-nav {
-    padding: 6px; 
+    padding: 3px; 
     gap: 4px;
     flex-wrap: wrap; 
     justify-content: center;

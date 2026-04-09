@@ -772,3 +772,9 @@ footer {
   text-align: center;
   border: 1px solid #eee;
 }
+
+@media (max-width: 600px) {
+  .hero-img {
+    content: url('/images/header_mobile.png');
+  }
+}

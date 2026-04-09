@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  color: #111;
+  min-height: 100vh;
+}
+
+/* ── NAV ── */
+.nav {
+  background: white;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  gap: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-name {
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ── HERO ── */
+.tnc-hero {
+  background: #111;
+  color: white;
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.tnc-hero h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tnc-hero p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.tnc-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tnc-meta-item {
+  text-align: center;
+}
+
+.tnc-meta-item span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 4px;
+}
+
+.tnc-meta-item strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── BODY ── */
+.tnc-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── SECTION CARDS ── */
+.tnc-section {
+  background: white;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tnc-section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sec-num {
+  width: 28px;
+  height: 28px;
+  background: #111;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tnc-section h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* ── LIST ── */
+.tnc-list {
+  list-style: none;
+}
+
+.tnc-list li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.75;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.tnc-list li:last-child {
+  border-bottom: none;
+}
+
+.dot {
+  min-width: 6px;
+  height: 6px;
+  background: #bbb;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+/* ── CHIPS ── */
+.date-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.chip {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #444;
+}
+
+.chip.key {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+.chip.accent {
+  background: #f0f7ff;
+  border-color: #cce0f5;
+  color: #1a5fa8;
+}
+
+/* ── CALLOUT BOXES ── */
+.highlight-box {
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.highlight-box strong {
+  color: #111;
+  font-weight: 600;
+}
+
+.warning-box {
+  background: #fff9f0;
+  border: 1px solid #fde5bb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 13px;
+  color: #7a4a0a;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+.warning-box strong {
+  font-weight: 600;
+}
+
+/* ── DTI BADGE ── */
+.dti-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f7ff;
+  border: 1px solid #cce0f5;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #1a5fa8;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.dti-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #1a5fa8;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── FOOTER AREA ── */
+.tnc-footer {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.tnc-footer-sub {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.tnc-footer-copy {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.back-btn {
+  display: inline-block;
+  background: #111;
+  color: white;
+  border-radius: 30px;
+  padding: 0.65rem 2rem;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  margin-top: 1.5rem;
+}
+
+.back-btn:hover {
+  background: #333;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .tnc-hero h1 { font-size: 22px; }
+  .tnc-meta { gap: 1.25rem; }
+  .tnc-body { padding: 1.25rem 1rem 3rem; }
+  .tnc-section { padding: 1.5rem 1.25rem; }
+  .date-chips { gap: 6px; }
+  .chip { font-size: 11px; padding: 4px 10px; }
+}

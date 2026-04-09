@@ -708,6 +708,21 @@ footer {
     height: 28px;
   }
   
+  .tab-nav-wrap {
+    padding: 0.75rem 0.5rem; 
+  }
+
+  .tab-nav {
+    padding: 6px; 
+    gap: 4px;
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .tab-btn {
+    padding: 0.45rem 0.7rem; 
+    font-size: 8px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;

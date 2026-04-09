@@ -765,3 +765,10 @@ footer {
       height: 18px;
     }
 }
+.announcement {
+  margin-top: 12px;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #eee;
+}

@@ -721,7 +721,7 @@ footer {
 
   .tab-btn {
     padding: 0.45rem 0.7rem; 
-    font-size: 8px;
+    font-size: 12px;
   }
   .footer-grid {
     grid-template-columns: 1fr;

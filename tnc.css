@@ -14,20 +14,19 @@ body {
 
 /* ── NAV ── */
 .nav {
-  background: white;
+  background: rgb(0, 0, 0);
   padding: 0 2rem;
   display: flex;
   align-items: center;
   height: 60px;
   gap: 1rem;
-  border-bottom: 1px solid #e0e0e0;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .nav-name {
-  color: #111;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 600;
 }

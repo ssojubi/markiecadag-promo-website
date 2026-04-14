@@ -148,7 +148,7 @@ body {
   width: auto;
   object-fit: cover;
   border-radius: 12px;
-  opacity: 0.75;
+  /* opacity: 0.75; */
   flex-shrink: 0;
   filter: blur(1px) grayscale(20%);
   user-select: none;
@@ -474,36 +474,38 @@ body {
   line-height: 1.6;
 }
 
-/* ── Messenger floating button ── */
-.msg-icon-btn {
-  position: absolute;
+/* ── Floating Messenger Button ── */
+.msg-float-btn {
+  position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  z-index: 999;
   transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.msg-icon-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+.msg-float-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
 }
 
-.msg-icon-btn img {
+.msg-float-btn img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+
 /* ── OUTLETS / MAP ── */
 .outlets-section {
-  background: #f9f9f9;
+  background: #1f1e1e;
   padding: 3rem 2rem;
   text-align: center;
 }
@@ -512,11 +514,11 @@ body {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #111;
+  color: #ffffff;
 }
 
 .outlets-section p {
-  color: #666;
+  color: #dddcdc;
   margin-bottom: 2rem;
   font-size: 14px;
 }

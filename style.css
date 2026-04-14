@@ -38,11 +38,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 1.25rem 0;
-  background: transparent;
   position: sticky;
   top: 60px;
   z-index: 99;
   background: #1f1e1e;
+  transition: background 0.3s ease;
 }
 
 .tab-nav {
@@ -83,7 +83,7 @@ body {
 
 /* ── HERO POSTER ── */
 .hero-wrap {
-  padding: 0 1.5rem 0 1.5rem; 
+  /* padding: 0 1.5rem 0 1.5rem;  */
   display: flex;
   justify-content: center;
   background: #1f1e1e;
@@ -94,7 +94,7 @@ body {
   height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 0px
 }
 
 .hero-poster {
@@ -123,35 +123,270 @@ body {
 
 /* ── PROMO INFO CARD ── */
 .promo-info-wrap {
-  display: flex;
-  justify-content: center;
-  padding: 1.5rem 1.5rem 2rem; 
-  background: #1f1e1e;
-  margin-top: 0; 
-} 
+  position: relative;
+  overflow: hidden;
+  padding: 48px 16px;
+}
 
+/* Scrolling background track */
+.promo-bg-track {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  will-change: transform;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.promo-bg-track img {
+  height: 100%;
+  max-height: 500px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.75;
+  flex-shrink: 0;
+  filter: blur(1px) grayscale(20%);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Card */
 .promo-info-card {
-  background: white;
-  border-radius: 14px;
-  width: 100%;
-  max-width: 640px;
-  padding: 2rem 2rem 1.5rem;
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.10);
   text-align: center;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 .promo-info-card h2 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
 }
 
 .promo-info-card p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
   line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Centered details */
+.promo-details-center {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.promo-detail-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.promo-detail-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #aaa;
+}
+
+.promo-detail-value {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+/* Prize list */
+.promo-prize-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.promo-prize-list li {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.promo-cta-text {
+  margin: 18px 0 20px;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.promo-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 520px) {
+  .promo-info-card { padding: 24px 18px; }
+}
+
+/* ── COLOR ANALYSIS BANNER ── */
+.ca-banner {
+  background: #1f1e1e;
+  border-bottom: 1px solid #333;
+}
+
+.ca-toggle {
+  width: 100%;
+  background: #2a2a2a;
+  border: none;
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: background 0.15s;
+  text-align: left;
+}
+
+.ca-toggle:hover {
+  background: #333;
+}
+
+.ca-toggle-icon {
+  font-size: 12px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.ca-toggle.open .ca-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.ca-body {
+  display: none;
+  overflow: hidden;
+}
+
+.ca-body.open {
+  display: block;
+}
+
+.ca-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 2.5rem;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ca-intro h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.4rem;
+}
+
+.ca-subtitle {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+}
+
+.ca-intro p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #bbb;
+}
+
+/* Season pills */
+.ca-seasons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ca-season {
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.ca-season.spring  { background: rgba(255, 182, 193, 0.15); color: #ffb6c1; }
+.ca-season.summer  { background: rgba(255, 220, 120, 0.15); color: #ffd878; }
+.ca-season.autumn  { background: rgba(205, 133,  63, 0.15); color: #cd853f; }
+.ca-season.winter  { background: rgba(135, 206, 250, 0.15); color: #87cefa; }
+
+.ca-seasons-note {
+  font-size: 0.85rem;
+  color: #999;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Process list */
+.ca-process h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.ca-process ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ca-process ul li {
+  font-size: 0.9rem;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+/* Offer block */
+.ca-offer {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ca-offer p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.ca-offer .participate-btn {
+  margin: 0.75rem auto 0;
 }
 
 .participate-btn {
@@ -175,8 +410,10 @@ body {
 
 .tnc-link {
   display: block;
-  font-size: 13px;
+  text-align: center;
+  font-size: 10px;
   font-weight: 600;
+  font-style: italic;
   color: #111;
   text-decoration: underline;
   cursor: pointer;
@@ -185,8 +422,9 @@ body {
 /* ── STEPS ── */
 .steps-section {
   background: white;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   text-align: center;
+  position: relative;
 }
 
 .steps-section h2 {
@@ -198,14 +436,14 @@ body {
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .step-card {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .step-num {
@@ -233,6 +471,33 @@ body {
   font-size: 13px;
   color: #666;
   line-height: 1.6;
+}
+
+/* ── Messenger floating button ── */
+.msg-icon-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.msg-icon-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.msg-icon-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ── OUTLETS / MAP ── */
@@ -404,6 +669,13 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.tnc_prizes {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.7;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
 /* ── WINNERS TAB ── */
 .winners-header {
   background: #111;
@@ -538,6 +810,26 @@ footer {
   color: white;
 }
 
+.legal-logo-wrap {
+  /* display: flex; */
+  gap: 12px;
+  margin-top: 1rem;
+  flex-direction: row;
+}
+.legal-logo-grid {
+  display: flex;
+  gap: 5px;
+  max-width: 800px;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.legal-logo {
+  padding: 3px;
+}
+.legal-logo img{
+  height: 100%;
+  width: 40px;
+}
 .footer-bottom {
   border-top: 1px solid #333;
   padding-top: 1.25rem;
@@ -690,7 +982,7 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 18px;
+    border-radius: 0px;
   }
   
   .nav {
@@ -777,6 +1069,7 @@ footer {
 
 @media (max-width: 600px) {
   .hero-img {
+    border-radius: 0px;
     content: url('/images/header_mobile.png');
   }
 }

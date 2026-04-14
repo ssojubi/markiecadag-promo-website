@@ -14,7 +14,7 @@
   <!-- ── NAVIGATION ── -->
   <nav class="nav">
     <img src="/images/mc_logo.jpg" style="width:36px;height:36px;border-radius:50%;">
-    <span class="nav-name">Markie Cadag</span>
+    <span class="nav-name">MarkieCadag Custom-made Fashion </span>
   </nav>
 
   <!-- ── TAB NAVIGATION ── -->
@@ -23,7 +23,7 @@
       <button class="tab-btn active" onclick="showTab('promo', this)">Promo</button>
       <button class="tab-btn" onclick="showTab('prizes', this)">My Prizes</button>
       <button class="tab-btn" onclick="showTab('winners', this)">Winner Announcement</button>
-      <button class="tab-btn" onclick="showTab('partners', this)">Partners</button>
+      <button class="tab-btn" onclick="showTab('partners', this)">Our Suppliers Partners</button>
     </div>
   </div>
 
@@ -31,52 +31,123 @@
   <!--        PROMO TAB            -->
   <!-- ════════════════════════════ -->
   <div id="tab-promo" class="tab-panel active">
+    <!-- ── COLOR ANALYSIS TOGGLE SECTION ── -->
+    <div class="ca-banner">
+      <button class="ca-toggle" onclick="toggleCA(this)">
+        <span>✨ Exclusive Offer — Book a Color Analysis & Win Your Dream Gown!</span>
+        <span class="ca-toggle-icon">▼</span>
+      </button>
+      <div class="ca-body">
+        <div class="ca-content">
+
+          <div class="ca-intro">
+            <h2>MarkieCadag Seasonal Palettes</h2>
+            <p class="ca-subtitle">A personal color analysis service — the <strong>first of its kind in Cavite</strong></p>
+            <p>A color analysis provides a detailed profile based on your skin tone, hair color, eye color, and undertones — helping you discover which hair colors, makeup, nails, and clothing best complement your unique complexion. Every analysis is personalized to you.</p>
+          </div>
+
+          <div class="ca-seasons">
+            <div class="ca-season spring">🌸 Spring</div>
+            <div class="ca-season summer">☀️ Summer</div>
+            <div class="ca-season autumn">🍂 Autumn</div>
+            <div class="ca-season winter">❄️ Winter</div>
+          </div>
+          <p class="ca-seasons-note">The four seasonal palettes are matched to your natural coloring — undertone, contrast, and intensity — just like the colors found in nature across each season.</p>
+
+          <div class="ca-process">
+            <h3>The Process</h3>
+            <ul>
+              <li>✔️ Personal consultation to assess your skin tone and undertone</li>
+              <li>✔️ Fabric and color draping to find your most flattering palette</li>
+              <li>✔️ Expert styling recommendations for gowns and outfits</li>
+              <li>✔️ Guidance on colors to wear (and avoid) for any occasion</li>
+            </ul>
+          </div>
+
+          <div class="ca-offer">
+            <p>✨ <strong>EXCLUSIVE OFFER:</strong> Book your Color Analysis for <strong>₱1,000</strong> and receive <strong>ONE (1) FREE raffle ticket 🎟️</strong></p>
+            <p>Get a chance to win a custom-made gown! 👰‍♀️💍</p>
+            <p>Step into your best colors and your dream look — because you deserve both. ✨</p>
+            <p>💌 Book your session today at <strong>Markie Cadag Custom-Made Fashion</strong></p>
+            <a class="participate-btn" href="https://forms.gle/apd4M7ybguxNPk2W8" target="_blank">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Hero Poster -->
     <div class="hero-wrap">
        <div class="poster-placeholder">
-          <span></span>
           <img src="/images/header_img.png" class="hero-img">
         </div>
-      <!-- <div class="hero-poster">
-      </div> -->
-    </div>
-    <!-- Promo Info Card -->
-    <div class="promo-info-wrap">
-      <div class="promo-info-card">
-        <h2>Sagot Ko Gown Mo!</h2>
-        <p>Take the chance and win your fairytale moment! With just ₱1,000, get a chance to win a free CUSTOM-MADE GOWN for your upcoming wedding or debut. Don't miss this chance Markidolls! Sagot ko na Gown mo!</p>
-        <a class="participate-btn" href="https://forms.gle/apd4M7ybguxNPk2W8" target="_blank">Join Now</a>
-        <a class="tnc-link" href="tnc.html">See Terms and Conditions</a>
-      </div>
     </div>
 
+<!-- Promo Info Card -->
+<div class="promo-info-wrap" style="position:relative;overflow:hidden;">
+  <!-- Moving background strip -->
+  <div class="promo-bg-track" id="promoBgTrack"></div>
+  <div class="promo-info-card">
+    <h2>Sagot Ko Gown Mo!</h2>
+    <p>The <strong>MC: "One Chance, One Dream Gown – Sagot Ko, Gown Mo! Raffle" ✨</strong> aims to make dreams come true by granting the winner a chance to own their ideal bridal &amp; debut gown.</p>
+    <p>Avail MC's <strong>Seasonal Palette Service – A Color Analysis Session</strong> for just <strong>₱1,000</strong> and receive <strong>one (1) FREE raffle ticket</strong>. Let's make every woman's fairytale moment come true, one bride and debutante at a time.</p>
+    <div class="promo-details-center">
+      <div class="promo-detail-block">
+        <span class="promo-detail-label">Promo Period</span>
+        <span class="promo-detail-value">April 14 – April 28, 2026</span>
+      </div>
+      <div class="promo-detail-block">
+        <span class="promo-detail-label">Prizes</span>
+        <ul class="promo-prize-list">
+          <li><strong>1 Bridal Winner</strong> – Free custom-made wedding gown</li>
+          <li><strong>1 Debut Winner</strong> – Free custom-made debut gown</li>
+        </ul>
+      </div>
+      <div class="promo-detail-block">
+        <span class="promo-detail-label">How to Enter</span>
+        <span class="promo-detail-value">Book a Color Analysis for <strong>₱1,000</strong> → get <strong>1 FREE raffle ticket</strong></span>
+      </div>
+    </div>
+    <p class="promo-cta-text">💌 Book your session today at <strong>Markie Cadag Custom-Made Fashion</strong> and get a chance to win your dream gown! 👰‍♀️💍</p>
+    <div class="promo-btn-group">
+      <a class="participate-btn" href="https://forms.gle/apd4M7ybguxNPk2W8" target="_blank">Join Now</a>
+    </div>
+    <a class="tnc-link" href="tnc.html">See Terms and Conditions</a>
+  </div>
+</div>
     <!-- Steps -->
     <div class="steps-section">
-      <h2>How to join?</h2>
+      <h2>How to Join the Raffle</h2>
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-num">1</div>
-          <h3>Fill out the form</h3>
-          <p>Open the official Google Form and enter your complete name, contact details, event type, and event date.</p>
+          <h3>Avail & Book</h3>
+          <p>Avail and book an appointment for Markie Cadag’s Seasonal Palette Service and receive a FREE raffle ticket.</p>
         </div>
         <div class="step-card">
           <div class="step-num">2</div>
-          <h3>Pay ₱1,000</h3>
-          <p>Pay the raffle entry fee through our designated payment channels. Each ₱1,000 = one raffle ticket. Multiple entries allowed!</p>
+          <h3>Fill out the form</h3>
+          <p>Fill out the official Google Form and complete your details, including your full name, contact information, event type, and event date.</p>
         </div>
         <div class="step-card">
           <div class="step-num">3</div>
-          <h3>Get your ticket</h3>
-          <p>Upload your proof of payment in the form. Your digital raffle ticket will be sent to your email as confirmation.</p>
+          <h3>Pay ₱1,000</h3>
+          <p>Settle the Seasonal Palette Service Fee through our designated payment channels. ₱1,000 = 1 raffle ticket. Only one (1) entry per participant is allowed.</p>
         </div>
         <div class="step-card">
           <div class="step-num">4</div>
-          <h3>Stay tuned for the livestream</h3>
-          <p>Once you receive your digital raffle ticket(s), stay in tune and follow the Markie Cadag Facebook page.</p>
+          <h3>Get your ticket</h3>
+          <p>Upload your proof of payment in the form. Once verified, your digital raffle ticket will be sent to your email as confirmation.</p>
         </div>
-      </div>
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <h3>Stay tuned for the livestream</h3>
+          <p>After receiving your digital raffle ticket, follow and stay updated on the Markie Cadag Facebook page for the live raffle draw.</p>
+        </div>
+      <a class="msg-icon-btn" href="https://www.facebook.com/MCmarkiecadag" target="_blank">
+        <img src="/images/social-media/icon_mess.png" alt="Message us on Messenger">
+      </a>
     </div>
+  </div>
 
     <!-- Map / Location -->
     <div class="outlets-section">
@@ -99,12 +170,17 @@
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">How much is one raffle entry?</button>
-        <div class="faq-a">₱1,000 per entry. Each payment equals one raffle ticket.</div>
+        <div class="faq-a">₱1,000 for a single entry only. Once you avail and book an appointment for Markie Cadag’s Seasonal Palette Service. You’ll receive a FREE raffle ticket.</div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">Can I join multiple times?</button>
-        <div class="faq-a">Yes. Each ₱1,000 payment gives you one entry. More entries = more chances of winning.</div>
+        <div class="faq-a">No. ₱1,000 = 1 raffle ticket. Only one (1) entry per participant is allowed.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How will the winner be notified and what happens next?</button>
+        <div class="faq-a">The winner will be notified via the email address provided upon registration. An appointment schedule will also be sent to arrange the next steps.</div>
       </div>
 
       <div class="faq-item">
@@ -156,6 +232,11 @@
         <button class="faq-q" onclick="toggleFaq(this)">How long will the raffle run?</button>
         <div class="faq-a">The raffle runs from April 14, 2026 to April 28, 2026, with a draw at the end of the month.</div>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is your refund policy?</button>
+        <div class="faq-a">Please note that all payments are final and non-refundable. We encourage clients to review all details before confirming.</div>
+      </div>
     </div>
   </div>
 
@@ -174,11 +255,13 @@
         <h3>Bridal Gown</h3>
         <p>A custom-made wedding gown designed exclusively for you by MarkieCadag Custom-Made Fashion. You may provide inspiration or reference photos for the design.</p>
         <span class="prize-qty">1 winner</span>
+        <p class="tnc_prizes">T&C Apply</p>
       </div>
       <div class="prize-card">
         <h3>Debut Gown</h3>
         <p>A custom-made debut gown crafted exclusively for your special 18th birthday celebration, designed by MarkieCadag Custom-Made Fashion.</p>
         <span class="prize-qty">1 winner</span>
+        <p class="tnc_prizes">T&C Apply</p>
       </div>
     </div>
 
@@ -197,7 +280,7 @@
       <h2>Winner Announcement</h2>
     </div>
     <div class="announcement">
-        <h3>No winners yet. The first draw happens on April 30, 2026 — stay tuned!</h3>
+        <h3>No Winners yet. The first draw is happening on Tentative Date: April 30, 2026 — stay tuned for the reveal</h3>
     </div>
     <div class="winners-table-section">
       
@@ -210,12 +293,12 @@
   </div>
 
   <!-- ════════════════════════════ -->
-  <!--       PARTNERS TAB          -->
+  <!--       OUR SUPPLIERS PARTNERS TAB          -->
   <!-- ════════════════════════════ -->
   <div id="tab-partners" class="tab-panel">
 
     <div class="partners-header">
-      <h2>Our Partners</h2>
+      <h2>Our Suppliers Partners</h2>
       <p>The brands and sponsors who make this possible.</p>
     </div>
 
@@ -330,19 +413,19 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>Markie Cadag</h3>
+        <h3>MarkieCadag "MC" Corporation</h3>
         <p>MarkieCadag Custom-Made Fashion. Join our raffle and get a chance to win your dream gown!</p>
         <div class="social-links">
           <a class="social-icon-btn" href="https://www.facebook.com/MCmarkiecadag" target="_blank" aria-label="Facebook">
-            <img src="/images/icon_white-circle.png" alt="Facebook" width="20" height="20">
+            <img src="/images/social-media/icon_fb_bw.png" alt="Facebook" width="20" height="20">
             Facebook
           </a>
           <a class="social-icon-btn" href="https://www.instagram.com/markiecadagcustommadefashion" target="_blank" aria-label="Instagram">
-            <img src="/images/icon_white-circle.png" alt="Instagram" width="20" height="20">
+            <img src="/images/social-media/icon_ig_bw.png" alt="Instagram" width="20" height="20">
             Instagram
           </a>
           <a class="social-icon-btn" href="https://www.tiktok.com/@mccustommadefashion" target="_blank" aria-label="TikTok">
-            <img src="/images/icon_white-circle.png" alt="TikTok" width="20" height="20">
+            <img src="/images/social-media/icon_tt_bw.png" alt="TikTok" width="20" height="20">
             TikTok
           </a>
         </div>
@@ -357,10 +440,26 @@
       <div class="footer-col">
         <h4>Legal</h4>
         <a href="tnc.html">Terms &amp; conditions</a>
+         <div class="legal-logo-wrap">
+            <div class="legal-logo-grid">
+              <div class="legal-logo">
+                <img src="/images/legal/icon_dti.png" alt="DTI Logo">
+              </div>
+              <div class="legal-logo">
+                <img src="/images/legal/icon_bir.png" alt="BIR Logo">
+              </div>
+               <div class="legal-logo">
+                <img src="/images/legal/icon_sec.png" alt="SEC Logo">
+              </div>
+               <div class="legal-logo">
+                <img src="/images/legal/icon_gentri.png" alt="Gen Tri Logo">
+              </div>      
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 MarkieCadag MC Corporation. "One Chance, One Dream Gown — Sagot Ko Gown Mo!" is a promotion by MarkieCadag Custom-Made Fashion. All rights reserved.</p>
+      <p>© 2026 MarkieCadag "MC" Corporation "One Chance, One Dream Gown — Sagot Ko Gown Mo!" is a promotion by MarkieCadag Custom-Made Fashion. All rights reserved.</p>
     </div>
   </footer>
 

@@ -126,6 +126,7 @@ body {
   position: relative;
   overflow: hidden;
   padding: 48px 16px;
+  background: #1f1e1e;
 }
 
 /* Scrolling background track */

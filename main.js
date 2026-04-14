@@ -65,13 +65,13 @@ if (window.scrollY > 60) {
     a.href = href;
     a.target = "_blank";
     a.rel = "noopener noreferrer";
-    a.style.cssText = "flex-shrink:0; display:block; height:340px;";
+    a.style.cssText = "flex-shrink:0; display:block; height:600px;";
 
     const img = document.createElement("img");
     img.src = src;
     img.alt = "";
     img.draggable = false;
-    img.style.cssText = "height:100%; width:auto; object-fit:cover; border-radius:12px; opacity:0.75; filter:blur(1px) grayscale(20%);";
+    img.style.cssText = "height:600px !important; width:auto; object-fit:cover; border-radius:12px; opacity:0.85; filter:grayscale(10%); flex-shrink:0;";
 
     img.onload = () => {
       loadedCount++;
@@ -81,7 +81,6 @@ if (window.scrollY > 60) {
       }
     };
 
-    // fallback in case image fails to load
     img.onerror = () => {
       loadedCount++;
       if (loadedCount === totalCount) {

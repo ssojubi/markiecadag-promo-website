@@ -94,7 +94,7 @@ if (window.scrollY > 60) {
   });
 
   let position = 0;
-  const speed = 0.6;
+  const speed = 2;
   let totalWidth = 0;
 
   function computeWidth() {

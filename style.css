@@ -139,7 +139,7 @@ img, iframe {
 .slideshow-section {
   position: relative;
   overflow: hidden;
-  height: 660px;
+  height: 460px;
   background: #1f1e1e;
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ img, iframe {
 
 /* exception for scrolling bg images */
 .promo-bg-track img {
-  height: 600px !important;
+  height: 400px !important;
   max-height: none !important;
   width: auto;
   object-fit: cover;
@@ -1128,5 +1128,26 @@ footer {
   .hero-img {
     border-radius: 0px;
     content: url('/images/header_mobile.png');
+  }
+}
+
+@media (max-width: 600px) {
+  .ca-banner-bg {
+    opacity: 0.85;
+    background-position: top center;
+  }
+
+  .ca-banner {
+    background: #000;
+  }
+
+  .ca-toggle {
+    background: rgba(0,0,0,0.5);
+  }
+
+  .ca-content {
+    background: rgba(0,0,0,0.55);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
   }
 }

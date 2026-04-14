@@ -281,11 +281,37 @@ img, iframe {
 .ca-banner {
   background: #1f1e1e;
   border-bottom: 1px solid #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.ca-banner-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/mc_ca_bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ca-body {
+  position: relative;
+  z-index: 1;
+  display: none;
+  overflow: hidden;
+}
+
+.ca-body.open {
+  display: block;
 }
 
 .ca-toggle {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  background: #2a2a2a;
+  background: transparent;
   border: none;
   color: white;
   padding: 1rem 1.5rem;
@@ -302,7 +328,7 @@ img, iframe {
 }
 
 .ca-toggle:hover {
-  background: #333;
+  background: rgba(255,255,255,0.05);
 }
 
 .ca-toggle-icon {

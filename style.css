@@ -1144,6 +1144,17 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .ca-seasons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .ca-season {
+    width: 100%;
+    text-align: center;
+  }
+
   .ca-banner-bg {
     background-position: top center;
     background-size: contain;
@@ -1166,9 +1177,12 @@ footer {
     background: rgba(0,0,0,0.55);
     border-radius: 12px;
     padding: 1.5rem 1rem;
+    gap: 1.25rem;
   }
-  .ca-seasons-note{
-    padding-bottom: 15px;
+
+  .ca-seasons-note {
+    margin-top: -0.5rem;
+    padding-bottom: 0;
   }
 }
 

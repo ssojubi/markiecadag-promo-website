@@ -468,8 +468,8 @@ img, iframe {
 
 .participate-btn {
   display: inline-block;
-  background: #111;
-  color: white;
+  background: white;
+  color: #111;
   border: none;
   border-radius: 30px;
   padding: 0.75rem 2.5rem;

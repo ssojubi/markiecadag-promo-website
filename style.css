@@ -419,6 +419,9 @@ img, iframe {
 }
 
 /* Process list */
+.ca-process{
+    margin-top: 10px;
+}
 .ca-process h3 {
   font-size: 1rem;
   font-weight: 600;

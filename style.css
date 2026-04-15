@@ -290,9 +290,14 @@ img, iframe {
   background-image: url('/images/mc_ca_bg.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0;
   z-index: 0;
   pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.ca-banner.open .ca-banner-bg {
+  opacity: 0.15;
 }
 
 @media (min-width: 601px) {
@@ -1140,10 +1145,13 @@ footer {
 
 @media (max-width: 600px) {
   .ca-banner-bg {
-    opacity: 0.35;
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .ca-banner.open .ca-banner-bg {
+    opacity: 0.35;
   }
 
   .ca-banner {

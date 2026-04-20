@@ -55,7 +55,7 @@ body {
 
 .tab-btn {
   padding: 0.55rem 1.4rem;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   cursor: pointer;
   border: none;
@@ -195,8 +195,8 @@ img, iframe {
   max-width: 680px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
   border-radius: 20px;
   padding: 36px 32px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.10);
@@ -512,8 +512,9 @@ img, iframe {
 }
 
 .steps-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -521,6 +522,8 @@ img, iframe {
 
 .step-card {
   padding: 1rem;
+  width: calc(25% - 1.5rem);
+  box-sizing: border-box;
 }
 
 .step-num {
@@ -667,10 +670,25 @@ img, iframe {
   line-height: 1.7;
   padding-bottom: 1rem;
   display: none;
+  margin-top: 0;
 }
 
 .faq-a.open {
   display: block;
+}
+
+.faq-a ul {
+  margin: 4px 0 4px 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faq-a ul li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
 }
 
 /* ── PRIZES TAB ── */
@@ -1045,7 +1063,14 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .steps-grid { grid-template-columns: 1fr; }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .step-card {
+    width: 100%;
+  }
+
   .prizes-grid { grid-template-columns: 1fr; }
   .partners-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }

@@ -296,7 +296,7 @@ img, iframe {
   transition: opacity 0.2s ease;
 }
 
-.ca-banner.open .ca-banner-bg {
+.ca-banner-bg {
   opacity: 0.15;
 }
 
@@ -315,51 +315,9 @@ img, iframe {
   overflow: hidden;
 }
 
-.ca-body.open {
-  display: block;
-}
-
-.ca-toggle {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  background: transparent;
-  border: none;
-  color: white;
-  padding: 1rem 1.5rem;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  transition: background 0.15s;
-  text-align: left;
-}
-
-.ca-toggle:hover {
-  background: rgba(255,255,255,0.05);
-}
-
-.ca-toggle-icon {
-  font-size: 12px;
-  flex-shrink: 0;
-  transition: transform 0.3s;
-}
-
-.ca-toggle.open .ca-toggle-icon {
-  transform: rotate(180deg);
-}
-
 .ca-body {
-  display: none;
-  overflow: hidden;
-}
-
-.ca-body.open {
   display: block;
+  overflow: hidden;
 }
 
 .ca-content {

@@ -17,12 +17,6 @@ function toggleFaq(btn) {
   }
 }
 
-function toggleCA(btn) {
-  btn.classList.toggle('open');
-  const body = btn.nextElementSibling;
-  body.classList.toggle('open');
-  btn.parentElement.classList.toggle('open');
-}
 
 // ── Tab Nav background on scroll ──
 const tabNavWrap = document.querySelector('.tab-nav-wrap');

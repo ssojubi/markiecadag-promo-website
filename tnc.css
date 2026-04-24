@@ -79,7 +79,7 @@ body {
 
 /* ── BODY ── */
 .tnc-body {
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -271,7 +271,57 @@ body {
 .back-btn:hover {
   background: #333;
 }
+/* ── BATCH SCHEDULE TABLE ── */
+.batch-table-wrap {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+}
 
+.batch-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 580px;
+}
+
+.batch-table thead tr {
+  background: #111;
+  color: white;
+}
+
+.batch-table th {
+  padding: 10px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.batch-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.batch-table tbody tr.alt {
+  background: #fafafa;
+}
+
+.batch-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.batch-table td {
+  padding: 9px 10px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.batch-table td.batch-name {
+  color: #111;
+  font-weight: 600;
+}
 /* ── RESPONSIVE ── */
 @media (max-width: 600px) {
   .tnc-hero h1 { font-size: 22px; }

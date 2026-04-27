@@ -331,3 +331,28 @@ body {
   .date-chips { gap: 6px; }
   .chip { font-size: 11px; padding: 4px 10px; }
 }
+
+.tnc-sublist {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0.75rem 1.5rem;
+}
+
+.tnc-sublist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.3rem 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.75;
+}
+
+.tnc-sublist .dot {
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background: #c9a96e;
+  margin-top: 0.45rem;
+}
